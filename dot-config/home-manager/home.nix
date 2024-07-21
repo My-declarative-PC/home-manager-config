@@ -20,13 +20,14 @@
   home.packages = [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
-    pkgs.helix
+
     pkgs.eza
-    pkgs.zellij
     pkgs.fastfetch
-    pkgs.lazygit
     pkgs.fish
+    pkgs.helix
+    pkgs.lazygit
     pkgs.starship
+    pkgs.zellij
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -48,7 +49,12 @@
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
-    # ".screenrc".source = dotfiles/screenrc;
+
+    ".config/fastfetch".source     = dotfiles/fastfetch/dot-config/fastfetch;
+    ".config/fish".source          = dotfiles/fish/dot-config/fish;
+    ".config/helix".source         = dotfiles/helix/dot-config/helix;
+    ".config/starship.toml".source = dotfiles/starship/dot-config/starship.toml;
+    ".config/zellij".source        = dotfiles/zellij/dot-config/zellij;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
