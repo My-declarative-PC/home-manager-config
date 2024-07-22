@@ -21,6 +21,7 @@
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
 
+    pkgs.gh
     pkgs.eza
     pkgs.fastfetch
     pkgs.fish
@@ -45,10 +46,10 @@
   ];
 
   programs.git = {
-        enable = true;
-            userName  = "Sitnikov Timofey";
-                userEmail = "tima.sitnikov@mail.ru";
-                  };
+    enable = true;
+    userName = "Sitnikov Timofey";
+    userEmail = "tima.sitnikov@mail.ru";
+  };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
@@ -57,11 +58,11 @@
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
 
-    ".config/fastfetch".source     = dotfiles/fastfetch/dot-config/fastfetch;
-    ".config/fish".source          = dotfiles/fish/dot-config/fish;
-    ".config/helix".source         = dotfiles/helix/dot-config/helix;
+    ".config/fastfetch".source = dotfiles/fastfetch/dot-config/fastfetch;
+    ".config/fish".source = dotfiles/fish/dot-config/fish;
+    ".config/helix".source = dotfiles/helix/dot-config/helix;
     ".config/starship.toml".source = dotfiles/starship/dot-config/starship.toml;
-    ".config/zellij".source        = dotfiles/zellij/dot-config/zellij;
+    ".config/zellij".source = dotfiles/zellij/dot-config/zellij;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
@@ -92,7 +93,7 @@
   #
   home.sessionVariables = {
     EDITOR = "hx";
-    SSH_AUTH_SOCK="\$XDG_RUNTIME_DIR/ssh-agent.socket";
+    SSH_AUTH_SOCK = "\$XDG_RUNTIME_DIR/ssh-agent.socket";
   };
 
   news.display = "silent";
