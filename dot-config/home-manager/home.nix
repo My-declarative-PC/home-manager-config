@@ -62,6 +62,10 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
+
+    ".config/nixpkgs/config.nix".text = ''
+      { allowUnfree = true; }
+    '';
   };
 
   # Home Manager can also manage your environment variables through
@@ -84,6 +88,10 @@
     EDITOR = "hx";
     SSH_AUTH_SOCK="\$XDG_RUNTIME_DIR/ssh-agent.socket";
   };
+
+  news.display = "silent";
+
+  nixpkgs.config.allowUnfree = true;
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
