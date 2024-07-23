@@ -21,13 +21,14 @@
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
 
-    pkgs.gh
     pkgs.eza
     pkgs.fastfetch
     pkgs.fish
+    pkgs.gh
     pkgs.helix
     pkgs.lazygit
     pkgs.starship
+    pkgs.yazi
     pkgs.zellij
     pkgs.zoxide
 
@@ -62,6 +63,8 @@
     ".config/fish".source = dotfiles/fish/dot-config/fish;
     ".config/helix".source = dotfiles/helix/dot-config/helix;
     ".config/starship.toml".source = dotfiles/starship/dot-config/starship.toml;
+    ".config/sway".source = dotfiles/sway/dot-config/sway;
+    ".config/wezterm".source = dotfiles/wezterm/dot-config/wezterm;
     ".config/zellij".source = dotfiles/zellij/dot-config/zellij;
 
     # # You can also set the file content immediately.
