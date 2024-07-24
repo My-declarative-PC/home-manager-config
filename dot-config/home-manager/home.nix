@@ -59,7 +59,13 @@
     userEmail = "tima.sitnikov@mail.ru";
   };
 
-  xdg.portal.enable = true;
+  xdg = {
+    enable = true;
+    userDirs = {
+      enable = true;
+      createDirectories = true;
+    };
+  };
   xdg.portal.extraPortals = [
     pkgs.xdg-desktop-portal
     pkgs.xdg-desktop-portal-gtk
