@@ -21,6 +21,7 @@
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
 
+    ### CLI
     pkgs.eza
     pkgs.fastfetch
     pkgs.fish
@@ -31,6 +32,12 @@
     pkgs.yazi
     pkgs.zellij
     pkgs.zoxide
+
+    ### GUI
+    pkgs.xdg-desktop-portal
+    pkgs.xdg-desktop-portal-gtk
+    pkgs.xdg-desktop-portal-wlr
+    pkgs.kdePackages.xdg-desktop-portal-kde
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -51,6 +58,15 @@
     userName = "Sitnikov Timofey";
     userEmail = "tima.sitnikov@mail.ru";
   };
+
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [
+    pkgs.xdg-desktop-portal
+    pkgs.xdg-desktop-portal-gtk
+    pkgs.xdg-desktop-portal-wlr
+    pkgs.kdePackages.xdg-desktop-portal-kde
+  ];
+  xdg.portal.config.common.default = "*";
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
