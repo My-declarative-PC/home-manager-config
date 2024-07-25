@@ -59,13 +59,13 @@
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
 
-    ".config/fastfetch".source = dotfiles/fastfetch/dot-config/fastfetch;
-    ".config/fish".source = dotfiles/fish/dot-config/fish;
-    ".config/helix".source = dotfiles/helix/dot-config/helix;
-    ".config/starship.toml".source = dotfiles/starship/dot-config/starship.toml;
-    ".config/sway".source = dotfiles/sway/dot-config/sway;
-    ".config/wezterm".source = dotfiles/wezterm/dot-config/wezterm;
-    ".config/zellij".source = dotfiles/zellij/dot-config/zellij;
+    ".config/fastfetch".source = ~/dotfiles/fastfetch/dot-config/fastfetch;
+    ".config/fish".source = ~/dotfiles/fish/dot-config/fish;
+    ".config/helix".source = ~/dotfiles/helix/dot-config/helix;
+    ".config/starship.toml".source = ~/dotfiles/starship/dot-config/starship.toml;
+    ".config/sway".source = ~/dotfiles/sway/dot-config/sway;
+    ".config/wezterm".source = ~/dotfiles/wezterm/dot-config/wezterm;
+    ".config/zellij".source = ~/dotfiles/zellij/dot-config/zellij;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
@@ -75,6 +75,9 @@
 
     ".config/nixpkgs/config.nix".text = ''
       { allowUnfree = true; }
+    '';
+    ".config/nix/nix.conf".text = ''
+      experimental-features = nix-command flakes
     '';
   };
 
