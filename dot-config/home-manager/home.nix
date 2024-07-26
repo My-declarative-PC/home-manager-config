@@ -93,8 +93,10 @@
   #
   home.sessionVariables = {
     EDITOR = "hx";
-    SSH_AUTH_SOCK = "\$XDG_RUNTIME_DIR/ssh-agent.socket";
   };
+
+  programs.bash.enable = true;
+  programs.fish.enable = true;
 
   news.display = "silent";
 
